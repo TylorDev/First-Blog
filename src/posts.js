@@ -1,7 +1,7 @@
 export const posts = [
   {
     id: 1,
-    image: "kaguya.jpg",
+    image: "First-Blog/kaguya.jpg",
     title: "Kaguya",
     subtitle: "subKaguya",
     description:
@@ -9,7 +9,7 @@ export const posts = [
   },
   {
     id: 2,
-    image: "elma.jpg",
+    image: "First-Blog/elma.jpg",
     title: "Elma",
     subtitle: "エルマ",
     description:
@@ -18,7 +18,7 @@ export const posts = [
 
   {
     id: 3,
-    image: "rikka.jpg",
+    image: "First-Blog/rikka.jpg",
     title: "Rikka Takanashi",
     subtitle: "小鳥遊(たかなし",
     description:
@@ -26,7 +26,7 @@ export const posts = [
   },
   {
     id: 4,
-    image: "komi.jpg",
+    image: "First-Blog/komi.jpg",
     title: "Shouko Komi",
     subtitle: "こみ しょうこ",
     description:
