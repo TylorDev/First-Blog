@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/* eslint-disable react/prop-types */
+import { posts } from "./posts";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>
+        <h1 id="titulo">BLOG DE PRUEBA</h1>
+      </header>
+      <section className="container">
+        {posts.map((post) => (
+          <Post key={post.id} post={post} />
+        ))}
+      </section>
+      <footer>
+        <section>
+          <a href="#titulo">ir al titulo</a>
+          <a href="mailto:jhontmg26@gmail.com">Correo de contacto</a>
+        </section>
+
+        <p>Copyright 2022</p>
+      </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+function Post({ post }) {
+  const { title, subtitle, image, description } = post;
+
+  return (
+    <article className="post">
+      <h2 className="post-title">{title} </h2>
+      <p className="post-description">{subtitle}</p>
+      <img className="post-imagen" src={image} alt="" />
+      <p className="Post-Description-Larga">{description}</p>
+    </article>
+  );
+}
